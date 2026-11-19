@@ -1,0 +1,34 @@
+[Unit]
+Description=FZONE AXON Bluetooth Controller
+After=bluetooth.service local-fs.target
+Wants=bluetooth.service
+
+[Service]
+Type=simple
+User=axon-light
+Group=axon-light
+RuntimeDirectory=axon-light
+RuntimeDirectoryMode=0750
+StateDirectory=axon-light
+StateDirectoryMode=0750
+EnvironmentFile=/etc/axon-light/axon-light.env
+ExecStart=/opt/axon-light/venv/bin/axon-light-controller
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_UNIX
+RestrictSUIDSGID=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+UMask=0007
+
+[Install]
+WantedBy=multi-user.target
+

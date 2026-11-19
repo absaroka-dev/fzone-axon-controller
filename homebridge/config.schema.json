@@ -1,0 +1,19 @@
+{
+  "pluginAlias": "FzoneAxon",
+  "pluginType": "accessory",
+  "schema": {
+    "type": "object",
+    "required": ["controllerHost"],
+    "properties": {
+      "name": { "title": "Name", "type": "string", "default": "Aquarium Light" },
+      "controllerHost": { "title": "Controller host", "type": "string", "default": "axon-light.local" },
+      "controllerUser": { "title": "Restricted SSH user", "type": "string", "default": "axon-bridge" },
+      "identityFile": { "title": "SSH private key", "type": "string", "default": "/homebridge/axon_ed25519" },
+      "knownHostsFile": { "title": "Known hosts file", "type": "string", "default": "/homebridge/axon_known_hosts" },
+      "timeoutMs": { "title": "Command timeout (ms)", "type": "integer", "minimum": 5000, "default": 12000 },
+      "pollIntervalMs": { "title": "Status polling interval (ms)", "type": "integer", "minimum": 5000, "default": 15000 }
+      ,"maximumChannelPercent": { "title": "Maximum AXON channel (%)", "type": "integer", "minimum": 1, "maximum": 35, "default": 35 }
+      ,"overrideSeconds": { "title": "Manual override duration (seconds)", "type": "integer", "minimum": 60, "maximum": 14400, "default": 3600 }
+    }
+  }
+}

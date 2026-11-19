@@ -1,0 +1,11 @@
+{
+  "name": "homebridge-fzone-axon",
+  "version": "0.2.0",
+  "description": "Local HomeKit accessory for the FZONE AXON aquarium light",
+  "license": "MIT",
+  "main": "index.js",
+  "engines": { "node": ">=20.0.0", "homebridge": ">=1.8.0" },
+  "keywords": ["homebridge-plugin", "aquarium", "light"],
+  "peerDependencies": { "homebridge": ">=1.8.0" },
+  "scripts": { "test": "node --test test/*.test.js" }
+}

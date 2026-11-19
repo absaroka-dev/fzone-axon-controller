@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fzone-axon-controller"
+version = "0.1.0"
+description = "Unofficial local BLE controller and bounded solar scheduler for FZONE AXON aquarium lights"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "absaroka-dev" }]
+keywords = ["aquarium", "bluetooth", "ble", "fzone", "axon", "homebridge"]
+dependencies = ["bleak>=0.22,<2"]
+
+[project.scripts]
+axon-light-controller = "axon_controller.axon_main:main"
+axon-light-client = "axon_controller.axon_client:main"
+
+[tool.setuptools]
+packages = ["axon_controller"]
+

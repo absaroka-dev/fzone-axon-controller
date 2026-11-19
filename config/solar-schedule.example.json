@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "mode": "solar",
+  "enabled": false,
+  "timezone": "UTC",
+  "latitude": 0.0,
+  "longitude": 0.0,
+  "postal_code": "00000",
+  "update_seconds": 30,
+  "lighting": {
+    "meaningful_light_hours": 6,
+    "maximum_meaningful_light_hours": 7,
+    "ramp_minutes": 60,
+    "maximum_channel_percent": 35,
+    "maximum_relative_output_hours": 1.35,
+    "peak_wrgb": {"white": 30, "red": 20, "green": 25, "blue": 20},
+    "twilight_wrgb": {"white": 1, "red": 0, "green": 0, "blue": 1}
+  },
+  "seasonal": {
+    "anchor": "solar_noon",
+    "solar_noon_offset_minutes": 0,
+    "outer_twilight": "civil"
+  },
+  "acclimation": {
+    "enabled": false,
+    "start_date": null,
+    "duration_days": 28,
+    "start_percent": 60
+  },
+  "co2_advisory": {
+    "enabled": false,
+    "lead_minutes": 60,
+    "stop_before_end_minutes": 60
+  },
+  "predawn_viewing": {
+    "enabled": false,
+    "start_local": "04:00",
+    "wrgb": {"white": 1, "red": 0, "green": 0, "blue": 0}
+  },
+  "evening_viewing": {
+    "enabled": false,
+    "end_local": "20:00",
+    "fade_minutes": 15,
+    "wrgb": {"white": 1, "red": 1, "green": 0, "blue": 0}
+  }
+}
+
